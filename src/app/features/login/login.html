@@ -14,12 +14,12 @@
           type="text"
           formControlName="username"
           placeholder="Enter your username"
-          [class.error]="username?.invalid && username?.touched"
+          [class.error]="username?.invalid && username.touched"
         >
-        @if (username?.invalid && username?.touched) {
-          @if (username?.errors?.['required']) {
+        @if (username?.invalid && username.touched) {
+          @if (username.errors?.['required']) {
             <span class="error-text">Username is required</span>
-          } @else if (username?.errors?.['minlength']) {
+          } @else if (username.errors?.['minlength']) {
             <span class="error-text">Username must be at least 3 characters</span>
           }
         }
@@ -32,12 +32,12 @@
           type="password"
           formControlName="password"
           placeholder="Enter your password"
-          [class.error]="password?.invalid && password?.touched"
+          [class.error]="password?.invalid && password.touched"
         >
-        @if (password?.invalid && password?.touched) {
-          @if (password?.errors?.['required']) {
+        @if (password?.invalid && password.touched) {
+          @if (password.errors?.['required']) {
             <span class="error-text">Password is required</span>
-          } @else if (password?.errors?.['minlength']) {
+          } @else if (password.errors?.['minlength']) {
             <span class="error-text">Password must be at least 6 characters</span>
           }
         }

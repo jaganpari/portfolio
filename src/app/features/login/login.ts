@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
@@ -10,11 +10,12 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './login.css',
 })
 export class Login {
+  private fb = inject(FormBuilder);
   loginForm: FormGroup;
   isLoading = signal(false);
   errorMessage = signal<string | null>(null);
 
-  constructor(private fb: FormBuilder) {
+  constructor() {
     this.loginForm = this.fb.group({
       username: ['', [Validators.required, Validators.minLength(3)]],
       password: ['', [Validators.required, Validators.minLength(6)]]
@@ -30,7 +31,7 @@ export class Login {
     this.isLoading.set(true);
     this.errorMessage.set(null);
 
-    const { username, password } = this.loginForm.value;
+    const { username } = this.loginForm.value;
 
     // Simulate API call
     setTimeout(() => {
