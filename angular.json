@@ -8,7 +8,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "angular": {
+    "portfolio": {
       "projectType": "application",
       "schematics": {},
       "root": "",
