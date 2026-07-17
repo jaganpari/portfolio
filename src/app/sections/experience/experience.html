@@ -1,0 +1,51 @@
+<section class="experience">
+
+    <div class="title">
+
+        <h1>Experience</h1>
+
+        <p>
+            My professional journey building enterprise web applications.
+        </p>
+
+    </div>
+
+    <div class="timeline">
+
+        @for(exp of experiences; track exp.period){
+
+            <div class="timeline-item">
+
+                <div class="dot"></div>
+
+                <div class="content">
+
+                    <span class="period">
+                        {{exp.period}}
+                    </span>
+
+                    <h2>{{exp.title}}</h2>
+
+                    <h3>{{exp.company}}</h3>
+
+                    <p>{{exp.description}}</p>
+
+                    <div class="chips">
+
+                        @for(tech of exp.technologies; track tech){
+
+                            <span>{{tech}}</span>
+
+                        }
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        }
+
+    </div>
+
+</section>

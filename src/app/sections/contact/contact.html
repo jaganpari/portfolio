@@ -1,0 +1,82 @@
+<section class="contact">
+
+  <div class="title">
+
+    <h1>Let's Work Together</h1>
+
+    <p>
+      I'm open to Angular Front-End opportunities.
+    </p>
+
+  </div>
+
+  <div class="contact-grid">
+
+    <div class="info">
+
+      <div class="card">
+
+        <h2>Contact Information</h2>
+
+        <p>📧 your-email@gmail.com</p>
+
+        <p>📍 Chennai, India</p>
+
+        <p>💼 LinkedIn</p>
+
+        <p>🐙 GitHub</p>
+
+      </div>
+
+    </div>
+
+    <form
+      [formGroup]="contactForm"
+      (ngSubmit)="submit()">
+
+      <mat-form-field appearance="outline">
+
+        <mat-label>Name</mat-label>
+
+        <input
+          matInput
+          formControlName="name">
+
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+
+        <mat-label>Email</mat-label>
+
+        <input
+          matInput
+          formControlName="email">
+
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+
+        <mat-label>Message</mat-label>
+
+        <textarea
+          rows="6"
+          matInput
+          formControlName="message">
+        </textarea>
+
+      </mat-form-field>
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit">
+
+        Send Message
+
+      </button>
+
+    </form>
+
+  </div>
+
+</section>

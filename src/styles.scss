@@ -1,0 +1,68 @@
+@use '@angular/material' as mat;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+
+@include mat.core();
+
+:root {
+
+  --primary: #2563EB;
+  --primary-light: #3B82F6;
+
+  --background: #F8FAFC;
+  --surface: #FFFFFF;
+
+  --text: #111827;
+  --subtitle: #6B7280;
+
+  --border: #E5E7EB;
+
+  --shadow:
+      0 10px 25px rgba(0,0,0,.08);
+
+  --radius:18px;
+
+}
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+*{
+
+// margin:0;
+
+padding:0;
+
+// box-sizing:border-box;
+
+font-family:'Inter',sans-serif;
+
+}
+
+body{
+
+background:#F8FAFC;
+
+color:#111827;
+
+}/* You can add global styles to this file, and also import other style files */
+
+body.dark{
+
+--background:#0F172A;
+
+--surface:#1E293B;
+
+--text:#F8FAFC;
+
+--subtitle:#CBD5E1;
+
+--border:#334155;
+
+}
+
+

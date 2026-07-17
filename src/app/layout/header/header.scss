@@ -1,0 +1,170 @@
+header {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+mat-toolbar {
+
+  max-width: 1400px;
+
+  margin: auto;
+
+  height: 72px;
+
+  border-radius: 18px;
+
+  background: rgba(255,255,255,.75);
+
+  backdrop-filter: blur(16px);
+
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+
+  display:flex;
+
+  justify-content:space-between;
+
+  padding:0 30px;
+}
+
+.logo{
+
+  font-size:32px;
+
+  font-weight:800;
+
+  letter-spacing:-1px;
+
+  cursor:pointer;
+}
+
+.logo span{
+
+  color:var(--primary);
+}
+
+nav{
+
+  display:flex;
+
+  gap:35px;
+
+  align-items:center;
+}
+
+nav a{
+
+  text-decoration:none;
+
+  color:#374151;
+
+  font-size:17px;
+
+  font-weight:600;
+
+  position:relative;
+
+  transition:.3s;
+}
+
+nav a:hover{
+
+  color:var(--primary);
+}
+
+nav a::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+
+  bottom:-8px;
+
+  width:0;
+
+  height:3px;
+
+  border-radius:20px;
+
+  background:#2563eb;
+
+  transition:.3s;
+}
+
+nav a:hover::after{
+
+  width:100%;
+}
+
+.active{
+
+  color:#2563eb !important;
+}
+
+.active::after{
+
+  width:100%;
+}
+
+.actions{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+}
+
+.actions button{
+
+  width:46px;
+
+  height:46px;
+
+  border-radius:50%;
+
+  background:#f8fafc;
+
+  transition:.3s;
+}
+
+.actions button:hover{
+
+  background:#2563eb;
+
+  color:white;
+
+  transform:rotate(20deg);
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+nav{
+
+display:none;
+
+}
+
+mat-toolbar{
+
+margin:0 15px;
+
+padding:0 20px;
+
+}
+
+.logo{
+
+font-size:28px;
+
+}
+
+}
