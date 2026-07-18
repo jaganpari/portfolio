@@ -54,17 +54,9 @@
         <img src="images/profile.jpg" alt="Profile">
 
         <!-- Floating Tech Icons -->
-
-        <div class="tech angular">A</div>
-
-        <div class="tech ts">TS</div>
-
-        <div class="tech js">JS</div>
-
-        <div class="tech ngrx">NgRx</div>
-
-        <div class="tech rx">RxJs</div>
-        <div class="tech nx">Nx</div>
+        @for(icon of techIcons; track icon.name) {
+            <app-tech-icon [name]="icon.name" [class]="icon.class"></app-tech-icon>
+        }
 
     </div>
 

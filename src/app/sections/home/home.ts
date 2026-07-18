@@ -8,11 +8,12 @@ import {
 import Typed from 'typed.js';
 
 import { MatButtonModule } from '@angular/material/button';
+import { TechIcon } from '../../shared/ui/tech-icon/tech-icon';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatButtonModule],
+  imports: [MatButtonModule, TechIcon],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
@@ -20,6 +21,15 @@ export class Home implements AfterViewInit {
 
   @ViewChild('typing')
   typingElement!: ElementRef;
+
+  techIcons = [
+    { name: 'A', class: 'angular' },
+    { name: 'TS', class: 'ts' },
+    { name: 'JS', class: 'js' },
+    { name: 'NgRx', class: 'ngrx' },
+    { name: 'RxJs', class: 'rx' },
+    { name: 'Nx', class: 'nx' }
+  ];
 
   ngAfterViewInit(): void {
 
