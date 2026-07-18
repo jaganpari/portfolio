@@ -18,29 +18,23 @@
 
         <h2>Contact Information</h2>
 
-        <p>📧 your-email@gmail.com</p>
-
-        <p>📍 Chennai, India</p>
-
-        <p>💼 LinkedIn</p>
-
-        <p>🐙 GitHub</p>
+        <p>📧 jaganpari@gmail.com</p>
+        <p>📱 +91 8939062670</p>
+        <p>📍 Velachery, Chennai, India</p>
+        <p>💼 <a href="https://www.linkedin.com/in/parivallalj" target="_blank">LinkedIn</a></p>
+        <p>🐙 <a href="https://github.com/jaganpari/portfolio" target="_blank">GitHub</a></p>
 
       </div>
 
     </div>
 
-    <form
-      [formGroup]="contactForm"
-      (ngSubmit)="submit()">
+    <form [formGroup]="contactForm" (ngSubmit)="submit()">
 
       <mat-form-field appearance="outline">
 
         <mat-label>Name</mat-label>
 
-        <input
-          matInput
-          formControlName="name">
+        <input matInput formControlName="name">
 
       </mat-form-field>
 
@@ -48,9 +42,7 @@
 
         <mat-label>Email</mat-label>
 
-        <input
-          matInput
-          formControlName="email">
+        <input matInput formControlName="email">
 
       </mat-form-field>
 
@@ -58,18 +50,12 @@
 
         <mat-label>Message</mat-label>
 
-        <textarea
-          rows="6"
-          matInput
-          formControlName="message">
+        <textarea rows="6" matInput formControlName="message">
         </textarea>
 
       </mat-form-field>
 
-      <button
-        mat-raised-button
-        color="primary"
-        type="submit">
+      <button mat-raised-button color="primary" type="submit">
 
         Send Message
 

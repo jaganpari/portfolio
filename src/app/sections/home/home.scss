@@ -11,24 +11,17 @@
   justify-content: space-between;
   align-items: center;
   gap: 4rem;
-
-  background:
-    radial-gradient(circle at top right, #dbeafe 0%, transparent 35%),
-    radial-gradient(circle at bottom left, #eff6ff 0%, transparent 30%),
-    #ffffff;
-    position: relative;
-
+  position: relative;
   overflow: hidden;
-
   background:
 
-  radial-gradient(circle at 10% 20%, #dbeafe, transparent 25%),
+    radial-gradient(circle at 10% 20%, #dbeafe, transparent 25%),
 
-  radial-gradient(circle at 90% 30%, #bfdbfe, transparent 20%),
+    radial-gradient(circle at 90% 30%, #bfdbfe, transparent 20%),
 
-  radial-gradient(circle at 40% 90%, #e0f2fe, transparent 30%),
+    radial-gradient(circle at 40% 90%, #e0f2fe, transparent 30%),
 
-  #ffffff;
+    #ffffff;
 }
 
 /* ===========================
@@ -108,8 +101,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   animation: floating 4s ease-in-out infinite;
+  position: relative;
 }
 
 .hero-image img {
@@ -260,199 +253,195 @@
 
 .typing {
 
-  margin:20px 0;
+  margin: 20px 0;
 
-  font-size:28px;
+  font-size: 28px;
 
-  color:var(--primary);
+  color: var(--primary);
 
-  font-weight:700;
+  font-weight: 700;
 
-  min-height:45px;
+  min-height: 45px;
 }
 
-.hero-image{
+.tech {
 
-position:relative;
+  position: absolute;
 
-}
+  width: 60px;
 
-.tech{
+  height: 60px;
 
-position:absolute;
+  background: white;
 
-width:60px;
+  border-radius: 18px;
 
-height:60px;
+  display: flex;
 
-background:white;
+  align-items: center;
 
-border-radius:18px;
+  justify-content: center;
 
-display:flex;
+  font-weight: bold;
 
-align-items:center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .1);
 
-justify-content:center;
-
-font-weight:bold;
-
-box-shadow:0 12px 30px rgba(0,0,0,.1);
-
-animation:float 3s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite;
 
 }
 
-.angular{
+.angular {
 
-top:20px;
+  top: 20px;
 
-left:20px;
+  left: 20px;
 
-color:#DD0031;
-
-}
-
-.ngrx{
-
-top:120px;
-
-right:-20px;
-
-color:#61DAFB;
+  color: #DD0031;
 
 }
 
-.ts{
+.ngrx {
 
-top:-10px;
+  top: 120px;
 
-right:100px;
+  right: -20px;
 
-color:#3178C6;
-
-}
-
-.js{
-
-bottom:30px;
-
-right:30px;
-
-background:#F7DF1E;
+  color: #61DAFB;
 
 }
 
-.rx{
+.ts {
 
-bottom:120px;
+  top: -10px;
 
-left:-20px;
+  right: 100px;
 
-color:#C2185B;
-
-}
-
-@keyframes float{
-
-0%,100%{
-
-transform:translateY(0);
+  color: #3178C6;
 
 }
 
-50%{
+.js {
 
-transform:translateY(-10px);
+  bottom: 30px;
 
-}
+  right: 30px;
 
-}
-
-.stats{
-
-max-width:1400px;
-
-margin:80px auto;
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:25px;
+  background: #F7DF1E;
 
 }
 
-.card{
+.rx {
 
-background:white;
+  bottom: 120px;
 
-padding:35px;
+  left: -20px;
 
-border-radius:20px;
-
-box-shadow:0 15px 40px rgba(0,0,0,.08);
-
-text-align:center;
-
-transition:.3s;
+  color: #C2185B;
 
 }
 
-.card:hover{
+@keyframes float {
 
-transform:translateY(-8px);
+  0%,
+  100% {
 
-}
+    transform: translateY(0);
 
-.card h2{
+  }
 
-font-size:42px;
+  50% {
 
-color:var(--primary);
+    transform: translateY(-10px);
 
-margin-bottom:10px;
-
-}
-
-.card p{
-
-font-size:18px;
-
-color:#666;
+  }
 
 }
 
-@media(max-width:900px){
+.stats {
 
-.stats{
+  max-width: 1400px;
 
-grid-template-columns:repeat(2,1fr);
+  margin: 80px auto;
 
-}
+  display: grid;
 
-}
+  grid-template-columns: repeat(4, 1fr);
 
-@media(max-width:600px){
-
-.stats{
-
-grid-template-columns:1fr;
+  gap: 25px;
 
 }
 
-.tech{
+.card {
 
-display:none;
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+
+  text-align: center;
+
+  transition: .3s;
 
 }
+
+.card:hover {
+
+  transform: translateY(-8px);
+
+}
+
+.card h2 {
+
+  font-size: 42px;
+
+  color: var(--primary);
+
+  margin-bottom: 10px;
+
+}
+
+.card p {
+
+  font-size: 18px;
+
+  color: #666;
+
+}
+
+@media(max-width:900px) {
+
+  .stats {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+}
+
+@media(max-width:600px) {
+
+  .stats {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .tech {
+
+    display: none;
+
+  }
 
 }
 
 @media (max-width: 576px) {
 
   .hero {
-    padding: 2rem 1.5rem;
+    padding: 8rem 1.5rem;
+
   }
 
   .hero-content h1 {
