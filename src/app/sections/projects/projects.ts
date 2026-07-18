@@ -10,10 +10,6 @@ interface Project {
 
   technologies: string[];
 
-  github: string;
-
-  demo?: string;
-
 }
 
 @Component({
@@ -31,70 +27,80 @@ export class Projects {
   projects: Project[] = [
 
     {
-      title: 'Enterprise Admin Dashboard',
+      title: 'ICON Digital Platform',
 
       description:
-        'Modern Angular dashboard with authentication, role-based access, reusable components, CRUD operations, responsive layout and charts.',
+        'Developed a dynamic C-SSRS assessment module using Angular Reactive Forms.',
 
       technologies: [
-        'Angular',
-        'Signals',
+        'Angular 19',
+        'TypeScript',
         'RxJS',
-        'Angular Material',
-        'TypeScript'
-      ],
-
-      github: '#',
-
-      demo: '#'
+        'NgRx'
+      ]
     },
 
     {
-      title: 'FHIR Healthcare Portal',
+      title: 'VUCEM 3.0',
 
       description:
-        'Healthcare application implementing FHIR resources, dynamic forms, validation and REST API integration.',
+        'Worked Micro Frontend architecture using Nx and Module Federation to manage multiple applications.',
 
       technologies: [
-        'Angular',
-        'FHIR',
-        'REST API',
+        'Angular 17',
+        'Akita',
+        'Bootstrap'
+      ]
+    },
+
+    {
+      title: 'Aakaash Field Track',
+
+      description:
+        'Upgraded application Angular 7 to Angular 14 version.',
+
+      technologies: [
+        'Angular 14',
+        'NgRx',
+        'RxJS',
         'Angular Material'
-      ],
-
-      github: '#'
+      ]
     },
 
     {
-      title: 'Spartacus Storefront',
+      title: 'Aakaash Portal',
 
       description:
-        'SAP Commerce Cloud storefront using Spartacus and OCC APIs with responsive UI.',
+        'Fixed UI bugs, consume RESTful APIs services and optimize performance.',
 
       technologies: [
-        'Angular',
-        'Spartacus',
-        'OCC',
-        'SCSS'
-      ],
-
-      github: '#'
+        'Angular 7',
+        'RxJs',
+        'Bootstrap'
+      ]
     },
-
     {
-      title: 'Angular Component Library',
+      title: 'Partner Portal',
 
       description:
-        'Reusable enterprise UI components including tables, dialogs, forms, loaders, pagination and cards.',
+        'Refactored legacy code to modern Angular standards in Angular 7.',
 
       technologies: [
-        'Angular',
-        'SCSS',
-        'Material',
-        'TypeScript'
-      ],
+        'Angular 7',
+        'RxJs',
+        'Bootstrap'
+      ]
+    },
+    {
+      title: 'Sata Travels',
 
-      github: '#'
+      description:
+        'Developed Single Page Applications (SPAs) using AngularJS.',
+
+      technologies: [
+        'Angular JS',
+        'Bootstrap'
+      ]
     }
 
   ];
