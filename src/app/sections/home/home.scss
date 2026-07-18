@@ -292,39 +292,42 @@
 
 .angular {
 
-  top: 20px;
+  top: -80px;
 
-  left: 20px;
+  left: 280px;
 
-  color: #DD0031;
+  background: #dc2b68;
+  color: #fff;
 
 }
 
 .ngrx {
 
-  top: 120px;
+  top: 320px;
 
-  right: -20px;
+  right: 30px;
+  color: #fff;
 
-  color: #61DAFB;
+  background: #571f7c;
 
 }
 
 .ts {
 
-  top: -10px;
+  top: 60px;
 
-  right: 100px;
+  right: 40px;
+  color: #fff;
 
-  color: #3178C6;
+  background: #235a97;
 
 }
 
 .js {
 
-  bottom: 30px;
+  bottom: -90px;
 
-  right: 30px;
+  right: 300px;
 
   background: #F7DF1E;
 
@@ -332,11 +335,25 @@
 
 .rx {
 
-  bottom: 120px;
+  top: 60px;
 
-  left: -20px;
+  left: 40px;
 
-  color: #C2185B;
+  background: #ec0f8f;
+  color: #fff;
+
+}
+
+.nx {
+
+  top: 320px;
+
+  left: 30px;
+
+  background: #18181a;
+
+  color: #fff;
+
 
 }
 
