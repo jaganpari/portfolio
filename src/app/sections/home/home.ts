@@ -8,12 +8,11 @@ import {
 import Typed from 'typed.js';
 
 import { MatButtonModule } from '@angular/material/button';
-import { TechIcon } from '../../shared/ui/tech-icon/tech-icon';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatButtonModule, TechIcon],
+  imports: [MatButtonModule],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })

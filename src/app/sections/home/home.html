@@ -55,7 +55,7 @@
 
         <!-- Floating Tech Icons -->
         @for(icon of techIcons; track icon.name) {
-            <app-tech-icon [name]="icon.name" [class]="icon.class"></app-tech-icon>
+            <div class="tech {{ icon.class }}"> {{ icon.name }} </div>
         }
 
     </div>
