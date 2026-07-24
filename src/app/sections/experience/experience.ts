@@ -2,11 +2,12 @@ import { Component, OnInit, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExperienceService } from '../../core/services/experience-service';
 import { Experience } from '../../core/models/experience.model';
+import { ChipsComponent } from '../../shared/ui/chips-component/chips-component';
 
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ChipsComponent],
   templateUrl: './experience.html',
   styleUrl: './experience.scss'
 })

@@ -30,15 +30,7 @@
 
                     <p>{{exp.description}}</p>
 
-                    <div class="chips">
-
-                        @for(tech of exp.technologies; track tech){
-
-                            <span>{{tech}}</span>
-
-                        }
-
-                    </div>
+                    <app-chips-component [technologies]="exp.technologies"></app-chips-component>
 
                 </div>
 

@@ -24,6 +24,8 @@
 
                         <span>{{skill.name}}</span>
 
+                        <span>{{skill.percentage | skillLevel}}</span>
+
                         <span>{{skill.percentage}}%</span>
 
                     </div>
@@ -32,7 +34,8 @@
 
                         <div
                             class="progress-bar"
-                            [style.width.%]="skill.percentage">
+                            [style.width.%]="skill.percentage"
+                            [style.background]="skill.background">
                         </div>
 
                     </div>
@@ -47,15 +50,7 @@
 
             <h2>Technologies</h2>
 
-            <div class="chips">
-
-                @for(tech of technologies(); track tech){
-
-                    <span>{{tech}}</span>
-
-                }
-
-            </div>
+            <app-chips-component [technologies]="technologies()"></app-chips-component>
 
         </div>
 

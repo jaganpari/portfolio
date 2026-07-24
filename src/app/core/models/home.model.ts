@@ -1,6 +1,7 @@
 interface TechIcon {
   name: string;
   class: string;
+  title: string;
 }
 
 interface HomeLink {

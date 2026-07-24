@@ -24,15 +24,7 @@
 
                 </p>
 
-                <div class="chips">
-
-                    @for(tech of project.technologies; track tech){
-
-                        <span>{{tech}}</span>
-
-                    }
-
-                </div>
+                <app-chips-component [technologies]="project.technologies"></app-chips-component>
 
             </div>
 

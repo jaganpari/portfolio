@@ -10,11 +10,12 @@ import Typed from 'typed.js';
 import { MatButtonModule } from '@angular/material/button';
 import { HomeData } from '../../core/models/home.model';
 import { HomeService } from '../../core/services/home-service';
+import { HighlightDirective } from '../../shared/directives/highlight.directive';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatButtonModule],
+  imports: [MatButtonModule, HighlightDirective],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })

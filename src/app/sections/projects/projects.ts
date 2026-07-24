@@ -4,12 +4,15 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { ProjectService } from '../../core/services/project-service';
 import { Project } from '../../core/models/project.model';
+import { ChipsComponent } from '../../shared/ui/chips-component/chips-component';
+
 @Component({
   selector: 'app-projects',
   standalone: true,
   imports: [
     CommonModule,
-    MatButtonModule
+    MatButtonModule,
+    ChipsComponent
   ],
   templateUrl: './projects.html',
   styleUrl: './projects.scss'

@@ -2,27 +2,33 @@
     "techIcons": [
         {
             "name": "A",
-            "class": "angular"
+            "class": "angular",
+            "title": "Angular"
         },
         {
             "name": "TS",
-            "class": "ts"
+            "class": "ts",
+            "title": "TypeScript"
         },
         {
             "name": "JS",
-            "class": "js"
+            "class": "js",
+            "title": "JavaScript"
         },
         {
             "name": "NgRx",
-            "class": "ngrx"
+            "class": "ngrx",
+            "title": "NgRx"
         },
         {
             "name": "RxJs",
-            "class": "rx"
+            "class": "rx",
+            "title": "RxJS"
         },
         {
             "name": "Nx",
-            "class": "nx"
+            "class": "nx",
+            "title": "Nx"
         }
     ],
     "homeLinks": [

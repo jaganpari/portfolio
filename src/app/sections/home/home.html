@@ -20,7 +20,10 @@
         </h3>
 
         <p class="summary">
-            Angular • TypeScript • NgRx • RxJS • Nx
+            @for(icon of homeData()?.techIcons; track icon.name) {
+                    <span class="dot"></span>
+                    {{ icon.title }}
+            }
         </p>
 
         <p class="experience">
@@ -32,7 +35,7 @@
         <div class="buttons">
 
             @for(link of homeData()?.homeLinks; track link.name) {
-                <a mat-stroked-button color="primary" href="{{link.link}}" target="_blank" download>
+                <a appHighlight mat-stroked-button color="primary" href="{{link.link}}" target="_blank" download>
                     {{link.name}}
                 </a>
             }
