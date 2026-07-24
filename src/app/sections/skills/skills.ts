@@ -1,10 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-interface Skill {
-  name: string;
-  percentage: number;
-}
+import { FRONT_END_SKILLS, TECHNOLOGIES } from '../../core/constants/skills.constants';
 
 @Component({
   selector: 'app-skills',
@@ -15,26 +11,8 @@ interface Skill {
 })
 export class Skills {
 
-  frontendSkills: Skill[] = [
-    { name: 'Angular', percentage: 95 },
-    { name: 'TypeScript', percentage: 95 },
-    { name: 'JavaScript', percentage: 95 },
-    { name: 'RxJS', percentage: 90 },
-    { name: 'Signals', percentage: 90 },
-    { name: 'NgRx', percentage: 85 }
-  ];
+  frontendSkills = signal(FRONT_END_SKILLS);
 
-  technologies = [
-    'Angular Material',
-    'Bootstrap',
-    'SCSS',
-    'LESS',
-    'Git',
-    'Azure DevOps',
-    'Nx',
-    'Webpack',
-    'Vite',
-    'GitHub Copilot'
-  ];
+  technologies = signal(TECHNOLOGIES);
 
 }

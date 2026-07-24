@@ -1,0 +1,60 @@
+{
+    "techIcons": [
+        {
+            "name": "A",
+            "class": "angular"
+        },
+        {
+            "name": "TS",
+            "class": "ts"
+        },
+        {
+            "name": "JS",
+            "class": "js"
+        },
+        {
+            "name": "NgRx",
+            "class": "ngrx"
+        },
+        {
+            "name": "RxJs",
+            "class": "rx"
+        },
+        {
+            "name": "Nx",
+            "class": "nx"
+        }
+    ],
+    "homeLinks": [
+        {
+            "name": "Resume",
+            "link": "resume/RESUME_PARIVALLAL.pdf"
+        },
+        {
+            "name": "GitHub",
+            "link": "https://github.com/jaganpari"
+        },
+        {
+            "name": "LinkedIn",
+            "link": "https://linkedin.com/in/parivallalj"
+        }
+    ],
+    "homeCards": [
+        {
+            "title": "Years Experience",
+            "count": "11.5+"
+        },
+        {
+            "title": "Projects",
+            "count": "15+"
+        },
+        {
+            "title": "Domains",
+            "count": "4+"
+        },
+        {
+            "title": "Dedication",
+            "count": "100%"
+        }
+    ]
+}

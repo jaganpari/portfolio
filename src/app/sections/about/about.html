@@ -44,53 +44,17 @@
 
             <div class="highlights">
 
-                <div>
+                @for(tech of highlightedTechnologies(); track tech) {
 
-                    <span>✔</span>
+                    <div class="highlight">
 
-                    11.5+ Years Experience
+                        <span>✔</span>
 
-                </div>
+                        {{tech}}
 
-                <div>
+                    </div>
 
-                    <span>✔</span>
-
-                    Angular 4 - Angular 20
-
-                </div>
-
-                <div>
-
-                    <span>✔</span>
-
-                    NgRx & State Management
-
-                </div>
-
-                <div>
-
-                    <span>✔</span>
-
-                    Angular Material
-
-                </div>
-
-                <div>
-
-                    <span>✔</span>
-
-                    RxJS & Signals
-
-                </div>
-
-                <div>
-
-                    <span>✔</span>
-
-                    Enterprise Applications
-
-                </div>
+                }
 
             </div>
 

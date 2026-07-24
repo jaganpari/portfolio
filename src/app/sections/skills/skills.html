@@ -16,7 +16,7 @@
 
             <h2>Frontend Development</h2>
 
-            @for(skill of frontendSkills; track skill.name){
+            @for(skill of frontendSkills(); track skill.name){
 
                 <div class="skill">
 
@@ -49,7 +49,7 @@
 
             <div class="chips">
 
-                @for(tech of technologies; track tech){
+                @for(tech of technologies(); track tech){
 
                     <span>{{tech}}</span>
 

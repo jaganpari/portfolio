@@ -31,19 +31,11 @@
 
         <div class="buttons">
 
-                <a mat-stroked-button color="primary" href="resume/RESUME_PARIVALLAL.pdf" download>
-
-                    Download Resume
-
+            @for(link of homeData()?.homeLinks; track link.name) {
+                <a mat-stroked-button color="primary" href="{{link.link}}" target="_blank" download>
+                    {{link.name}}
                 </a>
-
-                <a mat-stroked-button href="https://github.com/jaganpari" target="_blank">
-                    GitHub
-                </a>
-
-                <a mat-stroked-button href="https://linkedin.com/in/parivallalj" target="_blank">
-                    LinkedIn
-                </a>
+            }
 
         </div>
 
@@ -54,8 +46,8 @@
         <img src="images/profile.jpg" alt="Profile">
 
         <!-- Floating Tech Icons -->
-        @for(icon of techIcons; track icon.name) {
-            <div class="tech {{ icon.class }}"> {{ icon.name }} </div>
+        @for(icon of homeData()?.techIcons; track icon.name) {
+             <div class="tech {{ icon.class }}"> {{ icon.name }} </div>
         }
 
     </div>
@@ -63,37 +55,14 @@
 </section>
 
 <section class="stats">
+    @for(card  of homeData()?.homeCards; track card.title) {
+        <div class="card">
 
-    <div class="card">
+            <h2>{{card.count}}</h2>
 
-        <h2>11.5+</h2>
+            <p>{{card.title}}</p>
 
-        <p>Years Experience</p>
-
-    </div>
-
-    <div class="card">
-
-        <h2>15+</h2>
-
-        <p>Projects</p>
-
-    </div>
-
-    <div class="card">
-
-        <h2>4+</h2>
-
-        <p>Domains</p>
-
-    </div>
-
-    <div class="card">
-
-        <h2>100%</h2>
-
-        <p>Dedication</p>
-
-    </div>
+        </div>
+    }
 
 </section>

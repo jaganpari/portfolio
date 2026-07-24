@@ -2,12 +2,14 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
-  ViewChild
+  ViewChild, inject, OnInit, signal
 } from '@angular/core';
 
 import Typed from 'typed.js';
 
 import { MatButtonModule } from '@angular/material/button';
+import { HomeData } from '../../core/models/home.model';
+import { HomeService } from '../../core/services/home-service';
 
 @Component({
   selector: 'app-home',
@@ -16,19 +18,24 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
-export class Home implements AfterViewInit {
+export class Home implements AfterViewInit, OnInit {
+
+  homeService = inject(HomeService);
 
   @ViewChild('typing')
   typingElement!: ElementRef;
 
-  techIcons = [
-    { name: 'A', class: 'angular' },
-    { name: 'TS', class: 'ts' },
-    { name: 'JS', class: 'js' },
-    { name: 'NgRx', class: 'ngrx' },
-    { name: 'RxJs', class: 'rx' },
-    { name: 'Nx', class: 'nx' }
-  ];
+  homeData = signal<HomeData | null>(null);
+  
+
+  ngOnInit() {
+    this.homeService.getHomeData()
+      .subscribe((data: HomeData) => {
+        this.homeData.set(data);
+      });
+  }
+
+
 
   ngAfterViewInit(): void {
 
