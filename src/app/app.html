@@ -1,4 +1,7 @@
-<app-header></app-header>
+<app-header
+  [activeSection]="activeSection()"
+  (navClick)="scrollTo($event)">
+</app-header>
 
 <main>
 

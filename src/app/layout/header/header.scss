@@ -103,13 +103,26 @@ nav a:hover::after{
 }
 
 .active{
-
-  color:#2563eb !important;
+  color:var(--primary) !important;
 }
 
 .active::after{
+  content:"";
 
-  width:100%;
+  position:absolute;
+
+  left:0;
+
+  bottom:-8px;
+
+  height:3px;
+
+  border-radius:20px;
+
+  background:#2563eb;
+
+  transition:.3s;
+  width:100% !important;
 }
 
 .actions{
@@ -150,6 +163,18 @@ nav a:hover::after{
 
 .linkedin-icon:hover {
   color: #004182;
+}
+
+nav a {
+  padding: 10px 16px;
+  color: #666;
+  text-decoration: none;
+  transition: .3s;
+}
+
+nav a.active {
+  color: #fff;
+  border-radius: 8px;
 }
 
 /* Mobile */
