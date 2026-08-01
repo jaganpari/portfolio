@@ -39,9 +39,14 @@
 
 }
 
+.tech-card-title {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
 .skill-card,
 .tech-card {
-
   background: white;
   border-radius: 20px;
   padding: 35px;
@@ -87,6 +92,25 @@
   border-radius: 30px;
   background: linear-gradient(90deg,#2563eb,#3b82f6);
 
+}
+
+.clear-icon {
+  cursor: pointer;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.clear-icon:hover {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.no-results {
+  margin-top: 20px;
+  color: #6b7280;
+  font-size: 16px;
+  text-align: center;
 }
 
 

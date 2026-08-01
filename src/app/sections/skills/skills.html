@@ -18,39 +18,54 @@
 
             @for(skill of frontendSkills(); track skill.name){
 
-                <div class="skill">
+            <div class="skill">
 
-                    <div class="skill-header">
+                <div class="skill-header">
 
-                        <span>{{skill.name}}</span>
+                    <span>{{skill.name}}</span>
 
-                        <span>{{skill.percentage | skillLevel}}</span>
+                    <span>{{skill.percentage | skillLevel}}</span>
 
-                        <span>{{skill.percentage}}%</span>
+                    <span>{{skill.percentage}}%</span>
 
-                    </div>
+                </div>
 
-                    <div class="progress">
+                <div class="progress">
 
-                        <div
-                            class="progress-bar"
-                            [style.width.%]="skill.percentage"
-                            [style.background]="skill.background">
-                        </div>
-
+                    <div class="progress-bar" [style.width.%]="skill.percentage" [style.background]="skill.background">
                     </div>
 
                 </div>
+
+            </div>
 
             }
 
         </div>
 
         <div class="tech-card">
+            <div class="tech-card-title">
 
-            <h2>Technologies</h2>
+                <h2>Technologies</h2>
+                <form>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Search Technology</mat-label>
+                        <input matInput [formControl]="searchTerm" />
+                        @if (searchTerm.value) {
+                        <mat-icon matSuffix class="clear-icon" (click)="clearSearch()">
+                            close
+                        </mat-icon>
+                        }
+                    </mat-form-field>
+                </form>
+
+            </div>
 
             <app-chips-component [technologies]="technologies()"></app-chips-component>
+            @if(searchTerm.value && technologies().length === 0) {
+                <div class="no-results">No technologies found.</div>
+            }
 
         </div>
 
