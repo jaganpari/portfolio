@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import  { HighlightDirective } from '../../directives/highlight.directive';
 
 @Component({
@@ -8,5 +8,5 @@ import  { HighlightDirective } from '../../directives/highlight.directive';
   styleUrl: './chips-component.css',
 })
 export class ChipsComponent {
-  @Input() technologies: string[] = [];
+  technologies = input<string[]>([]);
 }
