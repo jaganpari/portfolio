@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, input, output, signal } from '@angular/core';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -18,7 +18,7 @@ import { NAV_ITEMS } from '../../core/constants/nav.constants';
 })
 export class Header {
 
-  navItems = NAV_ITEMS;
+  navItems = signal(NAV_ITEMS);
 
   activeSection = input.required<string>();
 

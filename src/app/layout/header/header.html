@@ -7,7 +7,7 @@
     </div>
 
     <nav>
-      @for (item of navItems; track item.id) {
+      @for (item of navItems(); track item.id) {
       <button mat-button [class.active]="activeSection() === item.id" (click)="onNavClick(item.id)">
         {{ item.label }}
       </button>
