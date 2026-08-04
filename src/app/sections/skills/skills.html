@@ -47,23 +47,21 @@
             <div class="tech-card-title">
 
                 <h2>Technologies</h2>
-                <form>
 
                     <mat-form-field appearance="outline">
                         <mat-label>Search Technology</mat-label>
-                        <input matInput [formControl]="searchTerm" />
-                        @if (searchTerm.value) {
+                        <input matInput [ngModel]="searchTerm()" (ngModelChange)="searchTerm.set($event)" />
+                        @if (searchTerm()) {
                         <mat-icon matSuffix class="clear-icon" (click)="clearSearch()">
                             close
                         </mat-icon>
                         }
                     </mat-form-field>
-                </form>
 
             </div>
 
-            <app-chips-component [technologies]="technologies()"></app-chips-component>
-            @if(searchTerm.value && technologies().length === 0) {
+            <app-chips-component [technologies]="filteredTechnologies()"></app-chips-component>
+            @if(searchTerm() && filteredTechnologies().length === 0) {
                 <div class="no-results">No technologies found.</div>
             }
 
