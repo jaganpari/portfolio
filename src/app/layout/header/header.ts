@@ -1,4 +1,4 @@
-import { Component, input, output, signal } from '@angular/core';
+import { Component, signal, model } from '@angular/core';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,12 +20,10 @@ export class Header {
 
   navItems = signal(NAV_ITEMS);
 
-  activeSection = input.required<string>();
-
-  navClick = output<string>();
+  activeSection = model.required<string>();
 
   onNavClick(sectionId: string) {
-    this.navClick.emit(sectionId);
+    this.activeSection.set(sectionId);
   }
 
 }

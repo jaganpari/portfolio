@@ -59,11 +59,8 @@
                     </mat-form-field>
 
             </div>
-
             <app-chips-component [technologies]="filteredTechnologies()"></app-chips-component>
-            @if(searchTerm() && filteredTechnologies().length === 0) {
-                <div class="no-results">No technologies found.</div>
-            }
+           
 
         </div>
 

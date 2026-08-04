@@ -1,6 +1,6 @@
 <app-header
-  [activeSection]="activeSection()"
-  (navClick)="scrollTo($event)">
+  [(activeSection)]="activeSection"
+  (click)="scrollTo(activeSection())">
 </app-header>
 
 <main>
