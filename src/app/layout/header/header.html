@@ -1,27 +1,74 @@
 <header>
 
-  <mat-toolbar>
+  <mat-toolbar class="toolbar">
 
-    <div class="logo">
+    <!-- Logo -->
+    <button class="logo" (click)="onNavClick('home')">
       <span>P</span>J
-    </div>
+    </button>
 
-    <nav>
+    <!-- Desktop Menu -->
+    <nav class="desktop-nav">
+
       @for (item of navItems(); track item.id) {
-      <button mat-button [class.active]="activeSection() === item.id" (click)="onNavClick(item.id)">
-        {{ item.label }}
-      </button>
+
+        <button
+          mat-button
+          [class.active]="activeSection() === item.id"
+          (click)="onNavClick(item.id)">
+
+          {{ item.label }}
+
+        </button>
+
       }
+
     </nav>
 
-    <div class="actions">
+    <div class="right-side">
 
-      <a href="https://www.linkedin.com/in/parivallalj" target="_blank" rel="noopener noreferrer">
+      <!-- <a
+        href="https://www.linkedin.com/in/parivallalj"
+        target="_blank">
+
         <i class="fab fa-linkedin linkedin-icon"></i>
-      </a>
+
+      </a> -->
+
+      <button
+        mat-icon-button
+        class="menu-btn"
+        (click)="toggleMenu()">
+
+        <mat-icon>
+          {{ menuOpen() ? 'close' : 'menu' }}
+        </mat-icon>
+
+      </button>
 
     </div>
 
   </mat-toolbar>
+
+  @if(menuOpen()) {
+
+    <div class="mobile-menu">
+
+      @for(item of navItems(); track item.id){
+
+        <button
+          mat-button
+          [class.active]="activeSection() === item.id"
+          (click)="onNavClick(item.id)">
+
+          {{ item.label }}
+
+        </button>
+
+      }
+
+    </div>
+
+  }
 
 </header>

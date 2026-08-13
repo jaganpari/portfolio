@@ -44,12 +44,12 @@
         </div>
 
         <div class="tech-card">
-            <div class="tech-card-title">
+            <!-- <div class="tech-card-title"> -->
 
                 <h2>Technologies</h2>
 
                     <mat-form-field appearance="outline">
-                        <mat-label>Search Technology</mat-label>
+                        <mat-label>Search Technologies</mat-label>
                         <input matInput [ngModel]="searchTerm()" (ngModelChange)="searchTerm.set($event)" />
                         @if (searchTerm()) {
                         <mat-icon matSuffix class="clear-icon" (click)="clearSearch()">
@@ -58,7 +58,7 @@
                         }
                     </mat-form-field>
 
-            </div>
+            <!-- </div> -->
             <app-chips-component [technologies]="filteredTechnologies()"></app-chips-component>
            
 
