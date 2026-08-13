@@ -11,31 +11,32 @@
             <span>J</span>
         </h1>
 
-        <h2>
-            Senior Front-End Developer
-        </h2>
+        <!-- <h2>
+            Angular Developer
+        </h2> -->
 
         <h3 class="typing">
             <span #typing></span>
         </h3>
 
-        <p class="summary">
+        <!-- <div class="tech-stack-top">
             @for(icon of homeData()?.techIcons; track icon.name) {
-                    <span class="dot"></span>
-                    {{ icon.title }}
+            <span class="chip">{{ icon.title }}</span>
             }
-        </p>
+        </div> -->
 
         <p class="experience">
-            11.5 years of experience as a Front-End Developer specializing in Angular, AngularJS, and ServiceNow UI. Proven expertise in designing, developing, and maintaining scalable, high-performance web applications across the Travel, Video Ad-Tech, Telecom, and Healthcare domains.
+            11.5 years of experience as a Front-End Developer specializing in Angular, AngularJS, and ServiceNow UI.
+            Proven expertise in designing, developing, and maintaining scalable, high-performance web applications
+            across the Travel, Video Ad-Tech, Telecom, and Healthcare domains.
         </p>
 
         <div class="buttons">
 
             @for(link of homeData()?.homeLinks; track link.name) {
-                <a appHighlight mat-stroked-button color="primary" href="{{link.link}}" target="_blank" download>
-                    {{link.name}}
-                </a>
+            <a appHighlight mat-stroked-button color="primary" href="{{link.link}}" target="_blank" download>
+                {{link.name}}
+            </a>
             }
 
         </div>
@@ -48,7 +49,7 @@
 
         <!-- Floating Tech Icons -->
         @for(icon of homeData()?.techIcons; track icon.name) {
-             <div class="tech {{ icon.class }}"> {{ icon.name }} </div>
+        <div class="tech {{ icon.class }}"> {{ icon.name }} </div>
         }
 
     </div>
@@ -56,14 +57,14 @@
 </section>
 
 <section class="stats">
-    @for(card  of homeData()?.homeCards; track card.title) {
-        <div class="card">
+    @for(card of homeData()?.homeCards; track card.title) {
+    <div class="card">
 
-            <h2>{{card.count}}</h2>
+        <h2>{{card.count}}</h2>
 
-            <p>{{card.title}}</p>
+        <p>{{card.title}}</p>
 
-        </div>
+    </div>
     }
 
 </section>
