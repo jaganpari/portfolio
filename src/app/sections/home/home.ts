@@ -45,7 +45,8 @@ export class Home implements AfterViewInit, OnInit {
       strings: [
         'Angular Developer',
         'Front-End Developer',
-        'UI Developer'
+        'UI Developer',
+        'Web Developer'
       ],
 
       typeSpeed: 60,
