@@ -8,9 +8,21 @@
 
       "technologies": [
         "Angular 19",
-        "TypeScript",
         "RxJS",
         "NgRx"
+      ]
+    },
+
+    {
+      "title": "ICON Trial Connect",
+
+      "description":
+        "Developed a dynamic C-SSRS assessment module using React Hook Forms.",
+
+      "technologies": [
+        "React 19",
+        "JavaScript",
+        "Redux"
       ]
     },
 
@@ -36,8 +48,7 @@
       "technologies": [
         "Angular 14",
         "NgRx",
-        "RxJS",
-        "Angular Material"
+        "RxJS"
       ]
     },
 
@@ -48,8 +59,8 @@
         "Fixed UI bugs, consume RESTful APIs services and optimize performance.",
 
       "technologies": [
-        "Angular 7",
-        "RxJs",
+        "React 17",
+        "Redux",
         "Bootstrap"
       ]
     },
@@ -73,7 +84,8 @@
 
       "technologies": [
         "Angular JS",
-        "Bootstrap"
+        "Bootstrap",
+        "REST API"
       ]
     }
 

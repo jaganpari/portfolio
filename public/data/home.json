@@ -62,5 +62,18 @@
             "title": "Dedication",
             "count": "100%"
         }
-    ]
+    ],
+
+    "roles": [
+        "Angular Developer",
+        "React Developer",
+        "Front-End Developer",
+        "UI Developer",
+        "Web Developer",
+        "Angular Lead",
+        "UI Lead",
+        "Front-End Lead",
+        "Technical Lead"
+      ]
+
 }

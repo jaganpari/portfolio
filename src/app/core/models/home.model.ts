@@ -18,4 +18,5 @@ export interface HomeData {
   homeLinks: HomeLink[];
   techIcons: TechIcon[];
   homeCards: HomeCard[];
+  roles: string[];
 }

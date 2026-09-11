@@ -5,7 +5,7 @@
       "title": "Application Developer",
       "company": "ICON plc, Chennai One IT SEZ, Chennai.",
       "description":
-        "Developed a dynamic C-SSRS assessment module using Angular Reactive Forms.",
+        "Developed a dynamic C-SSRS assessment module using Angular Reactive Forms and React Hook Forms.",
       "technologies": [
         "Angular 19",
         "Signals",
