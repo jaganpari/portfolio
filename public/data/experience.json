@@ -8,9 +8,11 @@
         "Developed a dynamic C-SSRS assessment module using Angular Reactive Forms and React Hook Forms.",
       "technologies": [
         "Angular 19",
+        "React 19",
         "Signals",
         "RxJS",
         "Angular Material",
+        "Material UI",
         "TypeScript",
         "NgRx"
       ]
@@ -39,9 +41,11 @@
         "Upgraded application Angular 7 to Angular 14 version.",
       "technologies": [
         "Angular 14",
+        "React 17",
         "NgRx",
         "RxJs",
-        "Angular Material"
+        "Angular Material",
+        "Bootstrap"
       ]
     },
     {
