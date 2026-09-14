@@ -17,7 +17,7 @@
       "title": "ICON Trial Connect",
 
       "description":
-        "Developed a dynamic C-SSRS assessment module using React Hook Forms.",
+        "Developed a participant profile module using React Hook Forms.",
 
       "technologies": [
         "React 19",
@@ -74,6 +74,18 @@
         "Angular 7",
         "RxJs",
         "Bootstrap"
+      ]
+    },
+    {
+      "title": "Publisher Portal",
+
+      "description":
+        "Developed a user management module using React 16 and Ant Design.",
+
+      "technologies": [
+        "React 16",
+        "JavaScript",
+        "Ant Design"
       ]
     },
     {

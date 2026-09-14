@@ -6,9 +6,9 @@
             "title": "Angular"
         },
         {
-            "name": "TS",
+            "name": "R",
             "class": "ts",
-            "title": "TypeScript"
+            "title": "React"
         },
         {
             "name": "JS",
@@ -48,7 +48,7 @@
     "homeCards": [
         {
             "title": "Years Experience",
-            "count": "11.5+"
+            "count": "12"
         },
         {
             "title": "Projects",
@@ -63,17 +63,14 @@
             "count": "100%"
         }
     ],
-
     "roles": [
-        "Angular Developer",
-        "React Developer",
+        "Angular/React Developer",
         "Front-End Developer",
         "UI Developer",
         "Web Developer",
-        "Angular Lead",
+        "Angular/React Lead",
         "UI Lead",
         "Front-End Lead",
         "Technical Lead"
-      ]
-
+    ]
 }

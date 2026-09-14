@@ -56,8 +56,10 @@
         "Refactored legacy code to modern Angular standards in Angular 7.",
       "technologies": [
         "Angular 7",
+        "React 16",
         "Bootstrap",
-        "RxJs"
+        "RxJs",
+        "Ant Design"
       ]
     },
     {
