@@ -34,7 +34,7 @@
         <div class="buttons">
 
             @for(link of homeData()?.homeLinks; track link.name) {
-            <a appHighlight mat-stroked-button color="primary" href="{{link.link}}" target="_blank" download>
+            <a appHighlight mat-stroked-button color="primary" href="{{link.link}}" target="_blank">
                 {{link.name}}
             </a>
             }
