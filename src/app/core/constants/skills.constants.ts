@@ -6,7 +6,7 @@ export interface Skill {
 
 export const FRONT_END_SKILLS: Skill[] = [
     { name: 'Angular', percentage: 95, background: '#dc2b68' },
-    { name: 'React', percentage: 85, background: '#067fa4' },
+    { name: 'React', percentage: 95, background: '#067fa4' },
     { name: 'TypeScript', percentage: 95, background: '#235a97' },
     { name: 'JavaScript', percentage: 95, background: '#F7DF1E' },
     { name: 'RxJS', percentage: 90, background: '#ec0f8f' },
