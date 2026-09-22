@@ -1,0 +1,202 @@
+.certification {
+
+    padding: 100px 5%;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+}
+
+.title {
+
+    text-align: center;
+
+    margin-bottom: 70px;
+
+}
+
+.title h1 {
+
+    font-size: 48px;
+
+    font-weight: 800;
+
+    color: #111827;
+
+}
+
+.title p {
+
+    font-size: 20px;
+
+    color: #6b7280;
+
+    margin-top: 10px;
+
+}
+
+.certification-container {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 60px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+
+}
+
+.photo {
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.photo img {
+
+    width: 500px;
+
+    height: 400px;
+
+}
+
+.content {
+
+    flex: 1.5;
+
+}
+
+.content h2 {
+
+    font-size: 38px;
+
+    margin-bottom: 25px;
+
+    color: #111827;
+
+}
+
+.content p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #6b7280;
+
+    margin-bottom: 25px;
+
+}
+
+.cert-table {
+    border-collapse: collapse;
+    width: 480px;
+    max-width: 100%;
+    background: #ffffff;
+    border: 1px solid #d8d3c8;
+}
+
+.cert-table caption {
+    text-align: left;
+    font-weight: bold;
+    font-size: 17px;
+    color: #1a1a1a;
+    padding: 14px 18px;
+    border-bottom: none;
+    caption-side: top;
+}
+
+.cert-table td {
+    border: 1px solid #d8d3c8;
+    padding: 14px 18px;
+    font-size: 15px;
+    word-break: break-word;
+}
+
+.cert-table tr td:first-child {
+    font-weight: bold;
+    color: #1a1a1a;
+    width: 45%;
+}
+
+.cert-table tr td:last-child {
+    color: #333;
+}
+
+.cert-table a {
+    color: #333;
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+@media(max-width:992px) {
+
+    .certification-container {
+
+        flex-direction: column;
+
+    }
+
+    .photo img {
+
+        width: 280px;
+
+    }
+
+    .content {
+
+    flex: 2.5;
+
+}
+
+    .cert-table,
+    .cert-table tbody,
+    .cert-table tr,
+    .cert-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .cert-table caption {
+        font-size: 16px;
+    }
+
+    .cert-table tr {
+        border: 1px solid #d8d3c8;
+        border-top: none;
+    }
+
+    .cert-table tr:first-of-type {
+        border-top: 1px solid #d8d3c8;
+    }
+
+    .cert-table td {
+        border: none;
+        padding: 10px 16px;
+    }
+
+    .cert-table tr td:first-child {
+        padding-bottom: 2px;
+        font-size: 13px;
+        color: #6b6b6b;
+        width: auto;
+    }
+
+    .cert-table tr td:last-child {
+        padding-top: 0;
+        padding-bottom: 14px;
+    }
+
+}

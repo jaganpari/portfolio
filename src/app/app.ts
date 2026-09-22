@@ -8,6 +8,7 @@ import { Skills } from './sections/skills/skills';
 import { Projects } from './sections/projects/projects';
 import { Experiences } from './sections/experience/experience';
 import { Contact } from './sections/contact/contact';
+import { Certifications } from './sections/certification/certification';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { Contact } from './sections/contact/contact';
     Skills,
     Projects,
     Experiences,
+    Certifications,
     Contact
   ],
   templateUrl: './app.html',

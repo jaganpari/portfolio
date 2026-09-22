@@ -1,0 +1,58 @@
+<section class="certification">
+
+    <div class="title">
+
+        <h1>Certifications</h1>
+
+
+    </div>
+
+    @for( certification of certifications(); track certification.credentialId) {
+
+    <div class="certification-container">
+
+        <div class="photo">
+
+            <img src="images/{{certification.certificateName}}.png" alt="Profile">
+
+        </div>
+
+        <div class="content">
+
+           <table class="cert-table">
+  <tr>
+    <td>Student</td>
+    <td>Parivallal J</td>
+  </tr>
+  <tr>
+    <td>Certificate Link</td>
+    <td><a href="https://verify.skilljar.com/c/ee8eo3mhx8d6" target="_blank">View Certificate</a></td>
+  </tr>
+  <tr>
+    <td>Completion Date</td>
+    <td>Sept. 21, 2026</td>
+  </tr>
+  <tr>
+    <td>Course Completed</td>
+    <td>Claude Code 101</td>
+  </tr>
+  <tr>
+    <td>Offered By</td>
+    <td>Anthropic Education</td>
+  </tr>
+</table>
+
+
+
+        </div>
+
+
+    </div>
+
+    }
+
+
+
+
+
+</section>
