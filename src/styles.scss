@@ -66,3 +66,41 @@ body.dark{
 }
 
 
+
+
+/* Arabic / UAE locale support */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap');
+
+html[dir="rtl"] body,
+html[dir="rtl"] body * {
+  font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+}
+
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+html[dir="rtl"] .hero-content,
+html[dir="rtl"] .content,
+html[dir="rtl"] .title,
+html[dir="rtl"] .info {
+  text-align: right;
+}
+
+html[dir="rtl"] .buttons,
+html[dir="rtl"] .highlights {
+  direction: rtl;
+}
+
+html[dir="rtl"] .timeline {
+  direction: rtl;
+}
+
+html[dir="rtl"] input,
+html[dir="rtl"] textarea {
+  text-align: right;
+}
+
+html[dir="rtl"] .mat-mdc-form-field {
+  direction: rtl;
+}
