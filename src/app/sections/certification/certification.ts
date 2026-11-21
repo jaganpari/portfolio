@@ -1,3 +1,4 @@
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CertificationService } from '../../core/services/certification-service';
@@ -6,7 +7,7 @@ import { Certification } from '../../core/models/certification';
 @Component({
   selector: 'app-certifications',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './certification.html',
   styleUrl: './certification.scss'
 })
