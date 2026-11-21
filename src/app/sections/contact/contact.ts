@@ -1,3 +1,4 @@
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 import { Component, inject, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
@@ -20,7 +21,8 @@ import { ToastService } from '../../core/services/toast-service';
     ReactiveFormsModule,
     MatButtonModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    TranslatePipe
   ],
   templateUrl: './contact.html',
   styleUrl: './contact.scss'

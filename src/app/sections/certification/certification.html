@@ -1,54 +1,14 @@
 <section class="certification">
-
-  <div class="title">
-
-    <h1>Certifications</h1>
-
-
-  </div>
-
-  @for( certification of certifications(); track certification.credentialId) {
-
-  <div class="certification-container">
-
-    <div class="photo">
-
-      <img src="images/{{certification.certificateName}}.png" alt="Profile">
-
+  <div class="title"><h1>{{ 'Certifications' | t }}</h1></div>
+  @for(certification of certifications(); track certification.credentialId) {
+    <div class="certification-container">
+      <div class="photo"><img src="images/{{certification.certificateName}}.png" alt="Certificate"></div>
+      <div class="content"><table class="cert-table">
+        <tr><td>{{ 'Certificate Link' | t }}</td><td><a href="https://verify.skilljar.com/c/{{certification.credentialId}}" target="_blank">{{ 'View Certificate' | t }}</a></td></tr>
+        <tr><td>{{ 'Completion Date' | t }}</td><td>{{certification.completionDate}}</td></tr>
+        <tr><td>{{ 'Course Completed' | t }}</td><td>{{certification.courseName}}</td></tr>
+        <tr><td>{{ 'Offered By' | t }}</td><td>{{certification.institution}}</td></tr>
+      </table></div>
     </div>
-
-    <div class="content">
-
-      <table class="cert-table">
-        <tr>
-          <td>Certificate Link</td>
-          <td><a href="https://verify.skilljar.com/c/{{certification.credentialId}}" target="_blank">View Certificate</a></td>
-        </tr>
-        <tr>
-          <td>Completion Date</td>
-          <td>{{certification.completionDate}}</td>
-        </tr>
-        <tr>
-          <td>Course Completed</td>
-          <td>{{certification.courseName}}</td>
-        </tr>
-        <tr>
-          <td>Offered By</td>
-          <td>{{certification.institution}}</td>
-        </tr>
-      </table>
-
-
-
-    </div>
-
-
-  </div>
-
   }
-
-
-
-
-
 </section>

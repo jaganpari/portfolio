@@ -1,67 +1,17 @@
 <section class="contact">
-
-  <div class="title">
-
-    <h1>Let's Work Together</h1>
-
-    <!-- <p>
-      I'm open to Angular Front-End opportunities.
-    </p> -->
-
-  </div>
-
+  <div class="title"><h1>{{ "Let's Work Together" | t }}</h1></div>
   <div class="contact-grid">
-
-    <div class="info">
-
-      <div class="card">
-
-        <h2>Contact Information</h2>
-        <p>📍 Chennai, Tamil Nadu, India</p>
-        <p>📧 jaganpari@gmail.com</p>
-        <p>📱 +91 8939062670</p>
-        <p>💼 <a href="https://www.linkedin.com/in/parivallalj" target="_blank">LinkedIn</a></p>
-        <p>🐙 <a href="https://github.com/jaganpari/portfolio" target="_blank">GitHub</a></p>
-
-      </div>
-
-    </div>
-
+    <div class="info"><div class="card">
+      <h2>{{ 'Contact Information' | t }}</h2>
+      <p>📍 Chennai, Tamil Nadu, India</p><p>📧 jaganpari@gmail.com</p><p>📱 +91 8939062670</p>
+      <p>💼 <a href="https://www.linkedin.com/in/parivallalj" target="_blank">LinkedIn</a></p>
+      <p>🐙 <a href="https://github.com/jaganpari/portfolio" target="_blank">GitHub</a></p>
+    </div></div>
     <form [formGroup]="contactForm" (ngSubmit)="submit()">
-
-      <mat-form-field appearance="outline">
-
-        <mat-label>Name</mat-label>
-
-        <input matInput formControlName="name">
-
-      </mat-form-field>
-
-      <mat-form-field appearance="outline">
-
-        <mat-label>Email</mat-label>
-
-        <input matInput formControlName="email">
-
-      </mat-form-field>
-
-      <mat-form-field appearance="outline">
-
-        <mat-label>Message</mat-label>
-
-        <textarea rows="6" matInput formControlName="message">
-        </textarea>
-
-      </mat-form-field>
-
-      <button mat-raised-button color="primary" type="submit">
-
-        Send Message
-
-      </button>
-
+      <mat-form-field appearance="outline"><mat-label>{{ 'Name' | t }}</mat-label><input matInput formControlName="name"></mat-form-field>
+      <mat-form-field appearance="outline"><mat-label>{{ 'Email' | t }}</mat-label><input matInput formControlName="email"></mat-form-field>
+      <mat-form-field appearance="outline"><mat-label>{{ 'Message' | t }}</mat-label><textarea rows="6" matInput formControlName="message"></textarea></mat-form-field>
+      <button mat-raised-button color="primary" type="submit">{{ 'Send Message' | t }}</button>
     </form>
-
   </div>
-
 </section>

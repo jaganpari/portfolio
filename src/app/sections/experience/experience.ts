@@ -1,3 +1,4 @@
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExperienceService } from '../../core/services/experience-service';
@@ -7,7 +8,7 @@ import { ChipsComponent } from '../../shared/ui/chips-component/chips-component'
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [CommonModule, ChipsComponent],
+  imports: [CommonModule, ChipsComponent, TranslatePipe],
   templateUrl: './experience.html',
   styleUrl: './experience.scss'
 })

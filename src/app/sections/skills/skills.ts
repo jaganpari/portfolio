@@ -1,3 +1,4 @@
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 import { Component, computed, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FRONT_END_SKILLS, TECHNOLOGIES } from '../../core/constants/skills.constants';
@@ -11,7 +12,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, ChipsComponent, SkillLevelPipe, MatFormFieldModule, MatInputModule, MatIconModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, ChipsComponent, SkillLevelPipe, MatFormFieldModule, MatInputModule, MatIconModule, TranslatePipe],
   templateUrl: './skills.html',
   styleUrl: './skills.scss'
 })

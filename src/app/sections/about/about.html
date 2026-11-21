@@ -1,65 +1,12 @@
 <section class="about">
-
-    <div class="title">
-
-        <h1>About Me</h1>
-
-        <!-- <p>
-            Passionate about building scalable enterprise web applications. Quicke learner and always eager to explore new technologies.
-        </p> -->
-
+  <div class="title"><h1>{{ 'About Me' | t }}</h1></div>
+  <div class="about-container">
+    <div class="photo"><img src="images/profile.jpg" alt="Profile"></div>
+    <div class="content">
+      <h2>{{ "Hi, I'm Parivallal" | t }}</h2>
+      <p>{{ 'Senior Front-End Developer with 12 years of experience specializing in Angular, React, AngularJS, TypeScript, JavaScript and modern UI development.' | t }}</p>
+      <p>{{ 'I have delivered enterprise applications across Healthcare, Telecom, Video Ad-Tech and Travel domains with a strong focus on performance, maintainability and user experience.' | t }}</p>
+      <div class="highlights">@for(tech of highlightedTechnologies(); track tech) { <div class="highlight"><span>✔</span>{{tech}}</div> }</div>
     </div>
-
-    <div class="about-container">
-
-        <div class="photo">
-
-            <img
-                src="images/profile.jpg"
-                alt="Profile">
-
-        </div>
-
-        <div class="content">
-
-            <h2>
-                Hi, I'm Parivallal
-            </h2>
-
-            <p>
-
-                Senior Front-End Developer with 12 years of experience
-                specializing in Angular, React, AngularJS, TypeScript,
-                JavaScript and modern UI development.
-
-            </p>
-
-            <p>
-
-                I have delivered enterprise applications across Healthcare,
-                Telecom, Video Ad-Tech and Travel domains with a strong
-                focus on performance, maintainability and user experience.
-
-            </p>
-
-            <div class="highlights">
-
-                @for(tech of highlightedTechnologies(); track tech) {
-
-                    <div class="highlight">
-
-                        <span>✔</span>
-
-                        {{tech}}
-
-                    </div>
-
-                }
-
-            </div>
-
-        </div>
-
-    </div>
-
+  </div>
 </section>

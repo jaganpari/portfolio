@@ -1,3 +1,4 @@
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 import { Component, signal, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
@@ -12,7 +13,8 @@ import { ChipsComponent } from '../../shared/ui/chips-component/chips-component'
   imports: [
     CommonModule,
     MatButtonModule,
-    ChipsComponent
+    ChipsComponent,
+    TranslatePipe
   ],
   templateUrl: './projects.html',
   styleUrl: './projects.scss'
