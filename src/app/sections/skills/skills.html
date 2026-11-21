@@ -1,67 +1,21 @@
 <section class="skills">
-
-    <div class="title">
-
-        <h1>Technical Skills</h1>
-
-        <!-- <p>
-            Technologies I use to build enterprise applications.
-        </p> -->
-
-    </div>
-
-    <div class="skills-grid">
-
-        <div class="skill-card">
-
-            <h2>Frontend Development</h2>
-
-            @for(skill of frontendSkills(); track skill.name){
-
-            <div class="skill">
-
-                <div class="skill-header">
-
-                    <span>{{skill.name}}</span>
-
-                    <span>{{skill.percentage | skillLevel}}</span>
-
-                    <span>{{skill.percentage}}%</span>
-
-                </div>
-
-                <div class="progress">
-
-                    <div class="progress-bar" [style.width.%]="skill.percentage" [style.background]="skill.background">
-                    </div>
-
-                </div>
-
-            </div>
-
-            }
-
+  <div class="title"><h1>{{ 'Technical Skills' | t }}</h1></div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h2>{{ 'Frontend Development' | t }}</h2>
+      @for(skill of frontendSkills(); track skill.name) {
+        <div class="skill"><div class="skill-header"><span>{{skill.name}}</span><span>{{skill.percentage | skillLevel}}</span><span>{{skill.percentage}}%</span></div>
+          <div class="progress"><div class="progress-bar" [style.width.%]="skill.percentage" [style.background]="skill.background"></div></div>
         </div>
-
-        <div class="tech-card">
-
-                <h2>Technologies</h2>
-
-                    <mat-form-field appearance="outline">
-                        <mat-label>Search Technologies</mat-label>
-                        <input matInput [ngModel]="searchTerm()" (ngModelChange)="searchTerm.set($event)" />
-                        @if (searchTerm()) {
-                        <mat-icon matSuffix class="clear-icon" (click)="clearSearch()">
-                            close
-                        </mat-icon>
-                        }
-                    </mat-form-field>
-
-            <app-chips-component [technologies]="filteredTechnologies()"></app-chips-component>
-           
-
-        </div>
-
+      }
     </div>
-
+    <div class="tech-card">
+      <h2>{{ 'Technologies' | t }}</h2>
+      <mat-form-field appearance="outline"><mat-label>{{ 'Search Technologies' | t }}</mat-label>
+        <input matInput [ngModel]="searchTerm()" (ngModelChange)="searchTerm.set($event)" />
+        @if (searchTerm()) { <mat-icon matSuffix class="clear-icon" (click)="clearSearch()">close</mat-icon> }
+      </mat-form-field>
+      <app-chips-component [technologies]="filteredTechnologies()"></app-chips-component>
+    </div>
+  </div>
 </section>
