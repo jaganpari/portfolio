@@ -6,7 +6,7 @@ export type Language = 'en' | 'ar';
 const ARABIC: Record<string, string> = {
   'Home':'الرئيسية','About Me':'نبذة عني','Skills':'المهارات','Experience':'الخبرة العملية','Projects':'المشاريع','Certifications':'الشهادات','Contact':'تواصل معي',
   "👋 Hello, I'm":'👋 مرحباً، أنا','12 years of experience as a Front-End Developer specializing in Angular, React and AngularJS. Proven expertise in designing, developing, and maintaining scalable, high-performance web applications across the Travel, Video Ad-Tech, Telecom, and Healthcare domains.':'مطور واجهات أمامية بخبرة 12 عاماً، متخصص في Angular وReact وAngularJS. أمتلك خبرة في تصميم وتطوير وصيانة تطبيقات ويب قابلة للتوسع وعالية الأداء في قطاعات السفر والإعلانات المرئية والاتصالات والرعاية الصحية.',
-  'Years Experience':'سنوات الخبرة','Dedication':'الالتزام','About Me':'نبذة عني','Hi, I\'m Parivallal':'مرحباً، أنا باريفالال',
+  'Years Experience':'سنوات الخبرة','Dedication':'الالتزام','About Mine':'نبذة عني','Hi, I\'m Parivallal':'مرحباً، أنا باريفالال',
   'Senior Front-End Developer with 12 years of experience specializing in Angular, React, AngularJS, TypeScript, JavaScript and modern UI development.':'مطور واجهات أمامية أول بخبرة 12 عاماً، متخصص في Angular وReact وAngularJS وTypeScript وJavaScript وتطوير واجهات المستخدم الحديثة.',
   'I have delivered enterprise applications across Healthcare, Telecom, Video Ad-Tech and Travel domains with a strong focus on performance, maintainability and user experience.':'قدمت تطبيقات مؤسسية في قطاعات الرعاية الصحية والاتصالات والإعلانات المرئية والسفر، مع التركيز على الأداء وسهولة الصيانة وتجربة المستخدم.',
   'Technical Skills':'المهارات التقنية','Frontend Development':'تطوير الواجهات الأمامية','Technologies':'التقنيات','Search Technologies':'ابحث عن التقنيات',
@@ -35,7 +35,9 @@ export class LanguageService {
 
   setLanguage(language: Language): void {
     this.language.set(language);
-    try { localStorage.setItem('portfolio-language', language); } catch {}
+    try { localStorage.setItem('portfolio-language', language); } catch(error) {
+      console.error('Error saving language to localStorage:', error);
+    }
     this.applyDocumentLanguage();
   }
 
