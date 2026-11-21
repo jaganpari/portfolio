@@ -10,7 +10,7 @@
       <button mat-stroked-button class="language-btn" (click)="toggleLanguage()" [attr.aria-label]="language.isArabic() ? 'Switch to English' : 'التبديل إلى العربية'">
         {{ language.isArabic() ? 'English' : 'العربية' }}
       </button>
-      <button mat-icon-button class="menu-btn" (click)="toggleMenu()"><mat-icon>{{ menuOpen() ? 'close' : 'menu' }}</mat-icon></button>
+      <button mat-icon-button class="menu-btn" (click)="toggleMenu()"><mat-icon [class]="!language.isArabic() ? 'menu-icon' : ''">{{ menuOpen() ? '&times;' : '&#9776;' }}</mat-icon></button>
     </div>
   </mat-toolbar>
   @if(menuOpen()) {
