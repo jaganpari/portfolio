@@ -18,7 +18,7 @@
       @for(item of navItems(); track item.id) {
         <button mat-button [class.active]="activeSection() === item.id" (click)="onNavClick(item.id)">{{ item.label | t }}</button>
       }
-      <button mat-stroked-button (click)="toggleLanguage()">{{ language.isArabic() ? 'English' : 'العربية' }}</button>
+      <!-- <button mat-stroked-button (click)="toggleLanguage()">{{ language.isArabic() ? 'English' : 'العربية' }}</button> -->
     </div>
   }
 </header>
