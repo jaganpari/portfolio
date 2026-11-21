@@ -1,3 +1,4 @@
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 import {
   AfterViewInit,
   Component,
@@ -17,7 +18,7 @@ import { HighlightDirective } from '../../shared/directives/highlight.directive'
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatButtonModule, HighlightDirective],
+  imports: [MatButtonModule, HighlightDirective, TranslatePipe],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
