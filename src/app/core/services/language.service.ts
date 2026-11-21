@@ -10,7 +10,7 @@ const ARABIC: Record<string, string> = {
   'Senior Front-End Developer with 12 years of experience specializing in Angular, React, AngularJS, TypeScript, JavaScript and modern UI development.':'مطور واجهات أمامية أول بخبرة 12 عاماً، متخصص في Angular وReact وAngularJS وTypeScript وJavaScript وتطوير واجهات المستخدم الحديثة.',
   'I have delivered enterprise applications across Healthcare, Telecom, Video Ad-Tech and Travel domains with a strong focus on performance, maintainability and user experience.':'قدمت تطبيقات مؤسسية في قطاعات الرعاية الصحية والاتصالات والإعلانات المرئية والسفر، مع التركيز على الأداء وسهولة الصيانة وتجربة المستخدم.',
   'Technical Skills':'المهارات التقنية','Frontend Development':'تطوير الواجهات الأمامية','Technologies':'التقنيات','Search Technologies':'ابحث عن التقنيات',
-  'Experience':'الخبرة العملية','Featured Projects':'أبرز المشاريع','Certifications':'الشهادات','Certificate Link':'رابط الشهادة','View Certificate':'عرض الشهادة','Completion Date':'تاريخ الإكمال','Course Completed':'الدورة المكتملة','Offered By':'مقدمة من',
+  'Featured Projects':'أبرز المشاريع','Certificate Link':'رابط الشهادة','View Certificate':'عرض الشهادة','Completion Date':'تاريخ الإكمال','Course Completed':'الدورة المكتملة','Offered By':'مقدمة من',
   "Let's Work Together":'لنعمل معاً','Contact Information':'معلومات التواصل','Name':'الاسم','Email':'البريد الإلكتروني','Message':'الرسالة','Send Message':'إرسال الرسالة','LinkedIn':'لينكدإن','GitHub':'جيت هب',
   'Senior Front-End Developer':'مطور واجهات أمامية أول','Senior Technical Specialist':'أخصائي تقني أول','Senior Software Developer':'مطور برمجيات أول','Software Engineer Level 2':'مهندس برمجيات - المستوى الثاني','Senior UI Developer':'مطور واجهات مستخدم أول',
   'Developed a dynamic C-SSRS assessment module using Angular Reactive Forms and React Hook Forms.':'طورت وحدة تقييم تفاعلية C-SSRS باستخدام نماذج Angular التفاعلية وReact Hook Form.',
@@ -22,7 +22,6 @@ const ARABIC: Record<string, string> = {
   'Developed a participant profile module using React Hook Forms.':'طورت وحدة ملفات المشاركين باستخدام React Hook Form.',
   'Fixed UI bugs, consume RESTful APIs services and optimize performance.':'أصلحت أخطاء واجهة المستخدم، وربطت خدمات REST API، وحسّنت الأداء.',
   'Developed a user management module using React 16 and Ant Design.':'طورت وحدة لإدارة المستخدمين باستخدام React 16 وAnt Design.',
-  'Name':'الاسم','Email':'البريد الإلكتروني','Message':'الرسالة'
 };
 
 @Injectable({ providedIn: 'root' })
