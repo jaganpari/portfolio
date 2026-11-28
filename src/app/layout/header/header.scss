@@ -15,9 +15,16 @@ header {
     display: flex;
     align-items: center;
     border-radius: 18px;
-    background: rgba(255, 255, 255, .8);
+
+    background: color-mix(in srgb, var(--surface) 85%, transparent);
+    color: var(--text);
+
     backdrop-filter: blur(18px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+
+    transition: background .3s ease, color .3s ease,
+        box-shadow .3s ease;
 }
 
 .logo {
@@ -26,10 +33,11 @@ header {
     cursor: pointer;
     font-size: 32px;
     font-weight: 800;
+    color: var(--text);
 }
 
 .logo span {
-    color: #2563eb;
+    color: var(--primary);
 }
 
 .desktop-nav {
@@ -38,8 +46,12 @@ header {
     margin-inline-start: auto;
 }
 
+.desktop-nav button {
+    color: var(--text);
+}
+
 .desktop-nav button.active {
-    color: #2563eb;
+    color: var(--primary);
 }
 
 .right-side {
@@ -51,6 +63,12 @@ header {
 
 .language-btn {
     white-space: nowrap;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+}
+
+.right-side button[mat-icon-button] {
+    color: var(--text);
 }
 
 .menu-btn {
@@ -63,16 +81,26 @@ header {
     inset-inline: 16px;
     display: flex;
     flex-direction: column;
-    background: white;
+
+    background: var(--surface);
+    color: var(--text);
+
+    border: 1px solid var(--border);
     border-radius: 16px;
     padding: 20px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, .15);
+    box-shadow: var(--shadow);
+
     animation: slideDown .25s ease;
 }
 
 .mobile-menu button {
     justify-content: flex-start;
     padding: 12px 0;
+    color: var(--text);
+}
+
+.mobile-menu button.active {
+    color: var(--primary);
 }
 
 @keyframes slideDown {
@@ -126,8 +154,8 @@ header {
         margin-inline-start: auto;
     }
 
-    .menu-icon {
-        position: relative;
-        bottom: 5px;
-    }
+    // .menu-icon {
+    //     position: relative;
+    //     bottom: 5px;
+    // }
 }

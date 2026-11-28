@@ -3,22 +3,34 @@
     <button class="logo" (click)="onNavClick('home')" aria-label="Home"><span>P</span>J</button>
     <nav class="desktop-nav" aria-label="Main navigation">
       @for (item of navItems(); track item.id) {
-        <button mat-button [class.active]="activeSection() === item.id" (click)="onNavClick(item.id)">{{ item.label | t }}</button>
+      <button mat-button [class.active]="activeSection() === item.id" (click)="onNavClick(item.id)">{{ item.label | t
+        }}</button>
       }
     </nav>
     <div class="right-side">
-      <button mat-stroked-button class="language-btn" (click)="toggleLanguage()" [attr.aria-label]="language.isArabic() ? 'Switch to English' : 'التبديل إلى العربية'">
+      <button mat-stroked-button class="language-btn" (click)="toggleLanguage()"
+        [attr.aria-label]="language.isArabic() ? 'Switch to English' : 'التبديل إلى العربية'">
         {{ language.isArabic() ? 'English' : 'العربية' }}
       </button>
-      <button mat-icon-button class="menu-btn" (click)="toggleMenu()"><mat-icon [class]="!language.isArabic() ? 'menu-icon' : ''">{{ menuOpen() ? '&times;' : '&#9776;' }}</mat-icon></button>
+      <button mat-icon-button (click)="toggleTheme()" aria-label="Toggle theme">
+
+        @if (themeService.currentTheme() === 'dark') {
+        <mat-icon>light_mode</mat-icon>
+        } @else {
+        <mat-icon>dark_mode</mat-icon>
+        }
+
+      </button>
+      <button mat-icon-button class="menu-btn" (click)="toggleMenu()"><mat-icon>{{ menuOpen() ? 'close' : 'menu' }}</mat-icon></button>
     </div>
   </mat-toolbar>
   @if(menuOpen()) {
-    <div class="mobile-menu">
-      @for(item of navItems(); track item.id) {
-        <button mat-button [class.active]="activeSection() === item.id" (click)="onNavClick(item.id)">{{ item.label | t }}</button>
-      }
-      <!-- <button mat-stroked-button (click)="toggleLanguage()">{{ language.isArabic() ? 'English' : 'العربية' }}</button> -->
-    </div>
+  <div class="mobile-menu">
+    @for(item of navItems(); track item.id) {
+    <button mat-button [class.active]="activeSection() === item.id" (click)="onNavClick(item.id)">{{ item.label | t
+      }}</button>
+    }
+    <!-- <button mat-stroked-button (click)="toggleLanguage()">{{ language.isArabic() ? 'English' : 'العربية' }}</button> -->
+  </div>
   }
 </header>

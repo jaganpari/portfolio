@@ -1,11 +1,10 @@
+
 .projects {
-
   max-width: 1400px;
-
   margin: auto;
-
   padding: 100px 5%;
-
+  background: var(--background);
+  color: var(--text);
 }
 
 .title {
@@ -24,115 +23,77 @@
   font-weight: 800;
   line-height: 1.2;
   text-align: center;
+  color: var(--text);
 }
 
 .title p {
   margin-top: 15px;
   text-align: center;
   font-size: 20px;
-  color: #6b7280;
+  color: var(--subtitle);
 }
 
 .project-grid {
-
   display: grid;
-
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-
   gap: 30px;
-
 }
 
 .project-card {
-
-  background: white;
-
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
   border-radius: 20px;
-
   padding: 35px;
-
-  box-shadow: 0 15px 40px rgba(0,0,0,.08);
-
-  transition: .35s;
-
+  box-shadow: var(--shadow);
+  transition: transform .35s ease, background-color .3s ease, box-shadow .3s ease;
   display: flex;
-
   flex-direction: column;
-
 }
 
 .project-card:hover {
-
   transform: translateY(-10px);
-
 }
 
 .project-card h2 {
-
   margin-bottom: 20px;
-
-  color: #111827;
-
+  color: var(--text);
 }
 
 .project-card p {
-
-  color: #6b7280;
-
+  color: var(--subtitle);
   line-height: 1.8;
-
 }
 
 .chips {
-
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 10px;
-
   margin: 25px 0;
-
 }
 
 .chips span {
-
-  background: #eef4ff;
-
-  color: #2563eb;
-
+  background: color-mix(in srgb, var(--primary) 10%, var(--surface));
+  color: var(--primary);
+  border: 1px solid color-mix(in srgb, var(--primary) 20%, transparent);
   padding: 8px 15px;
-
   border-radius: 25px;
-
   font-size: 14px;
-
   font-weight: 600;
-
 }
 
 .buttons {
-
   margin-top: auto;
-
   display: flex;
-
   gap: 15px;
-
 }
 
-@media(max-width:768px){
+@media(max-width:768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 
-.project-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.buttons{
-
-flex-direction:column;
-
-}
-
+  .buttons {
+    flex-direction: column;
+  }
 }

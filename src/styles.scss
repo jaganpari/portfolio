@@ -1,106 +1,115 @@
+
 @use '@angular/material' as mat;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap');
 
 @include mat.core();
 
 :root {
-
   --primary: #2563EB;
   --primary-light: #3B82F6;
-
   --background: #F8FAFC;
   --surface: #FFFFFF;
-
   --text: #111827;
   --subtitle: #6B7280;
-
   --border: #E5E7EB;
-
-  --shadow:
-      0 10px 25px rgba(0,0,0,.08);
-
-  --radius:18px;
-
+  --shadow: 0 10px 25px rgba(0,0,0,.08);
+  --radius: 18px;
 }
+
+body.dark {
+  --primary: #60A5FA;
+  --primary-light: #93C5FD;
+  --background: #0F172A;
+  --surface: #1E293B;
+  --text: #F8FAFC;
+  --subtitle: #CBD5E1;
+  --border: #334155;
+  --shadow: 0 10px 25px rgba(0,0,0,.3);
+}
+
 html {
-
-    scroll-behavior: smooth;
-
+  scroll-behavior: smooth;
 }
 
-
-*{
-
-// margin:0;
-
-padding:0;
-
-// box-sizing:border-box;
-
-font-family:'Inter',sans-serif;
-
+* {
+  // box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-body{
-
-background:#F8FAFC;
-
-color:#111827;
-
-}/* You can add global styles to this file, and also import other style files */
-
-body.dark{
-
---background:#0F172A;
-
---surface:#1E293B;
-
---text:#F8FAFC;
-
---subtitle:#CBD5E1;
-
---border:#334155;
-
+body {
+  // margin: 0;
+  // padding: 0;
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color .3s ease, color .3s ease;
 }
 
+html,
+body {
+  min-height: 100%;
+}
 
+body.dark {
+  background-color: var(--background);
+  color: var(--text);
+}
 
+/* Angular Material Toolbar */
+body.dark .mat-toolbar {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+}
 
-/* Arabic / UAE locale support */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap');
+/* Common portfolio elements */
+section {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.card,
+.project-card,
+.skill-card {
+  background-color: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+p,
+.subtitle {
+  color: var(--subtitle);
+}
 
 html[dir="rtl"] body,
 html[dir="rtl"] body * {
   font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
 }
 
-html[dir="rtl"] body {
-  text-align: right;
+/* Preserve Material Icons in Arabic RTL mode */
+html[dir="rtl"] mat-icon,
+html[dir="rtl"] .material-icons,
+html[dir="rtl"] .mat-icon {
+  font-family: 'Material Icons' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  bottom: 10px;
 }
 
-html[dir="rtl"] .hero-content,
-html[dir="rtl"] .content,
-html[dir="rtl"] .title,
-html[dir="rtl"] .info {
-  text-align: right;
+html[dir="rtl"] .menu-btn {
+  position: relative;
+  top: 7px;
 }
 
-html[dir="rtl"] .buttons,
-html[dir="rtl"] .highlights {
-  direction: rtl;
-}
-
-html[dir="rtl"] .timeline {
-  direction: rtl;
-}
-
-html[dir="rtl"] input,
-html[dir="rtl"] textarea {
-  text-align: right;
-}
-
-html[dir="rtl"] .mat-mdc-form-field {
-  direction: rtl;
-}

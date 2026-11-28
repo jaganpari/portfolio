@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { NAV_ITEMS } from '../../core/constants/nav.constants';
 import { LanguageService } from '../../core/services/language.service';
 import { TranslatePipe } from '../../shared/pipes/translate.pipe';
+import { ThemeService } from '../../core/services/theme.service';
 
 @Component({
   selector: 'app-header',
@@ -19,6 +20,7 @@ export class Header {
   activeSection = model.required<string>();
   menuOpen = signal(false);
   readonly language = inject(LanguageService);
+  themeService = inject(ThemeService);
 
   onNavClick(sectionId: string) {
     this.activeSection.set(sectionId);
@@ -27,4 +29,8 @@ export class Header {
   }
   toggleMenu() { this.menuOpen.update(v => !v); }
   toggleLanguage() { this.language.toggleLanguage(); }
+
+  toggleTheme(): void {
+    this.themeService.toggleTheme();
+  }
 }
